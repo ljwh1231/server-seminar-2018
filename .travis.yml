@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.6"
+
+sudo: required
+
+services:
+  - docker
+
+install:
+  - pip install -r requirements.txt
+  - pip install coverage
+
+script:
+  - coverage run --source . -m unittest discover ./test
+
+after_success:
+  - docker build -t poolc/server-seminar-2018:ljwh1231 .
+  - docker push poolc/server-seminar-2018:ljwh1231
