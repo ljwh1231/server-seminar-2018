@@ -19,3 +19,4 @@ pip install -r requirements.txt
 ```bash
 FLASK_APP=app.py flask run -h 0.0.0.0 --with-threads
 ```
+[![Build Status](https://travis-ci.org/ljwh1231/server-seminar-2018.svg?branch=master)](https://travis-ci.org/ljwh1231/server-seminar-2018)
